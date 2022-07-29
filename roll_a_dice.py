@@ -1,56 +1,47 @@
 import random
-response=input('Press y to start or n to end(y/n): ')
 
-while response=='y':
-    no=random.randint(1,6)
-    if(no==1):
-        print("[-----]")
-        print("[     ]")
-        print("[  0  ]")
-        print("[     ]")
-        print("[-----]")
-    response
+def roll_a_dice(min,max):
+    while True:
+        print("Rolling the dice...")
+        num = random.randint(min,max)
+        if num==1:
+            print("[-----]")
+            print("[     ]")
+            print("[  0  ]")
+            print("[     ]")
+            print("[-----]")
+        elif num==2:
+            print("[-----]")
+            print("[0    ]")
+            print("[     ]")
+            print("[    0]")
+            print("[-----]")
+        elif num==3:
+            print("[-----]")
+            print("[0    ]")
+            print("[  0  ]")
+            print("[    0]")
+            print("[-----]")
+        elif num==4:
+            print("[-----]")
+            print("[0   0]")
+            print("[     ]")
+            print("[0   0]")
+            print("[-----]")
+        elif num==5:    
+            print("[-----]")
+            print("[0   0]")
+            print("[  0  ]")
+            print("[0   0]")
+            print("[-----]")
+        else :
+            print("[-----]")
+            print("[0   0]")
+            print("[0   0]")
+            print("[0   0]")
+            print("[-----]")
 
-    elif:
-        print("[-----]")
-        print("[0    ]")
-        print("[     ]")
-        print("[    0]")
-        print("[-----]")
-    response
-
-    elif:
-        print("[-----]")
-        print("[0    ]")
-        print("[  0  ]")
-        print("[    0]")
-        print("[-----]")
-    response
-
-    elif:
-        print("[-----]")
-        print("[0   0]")
-        print("[     ]")
-        print("[0   0]")
-        print("[-----]")
-    response
-
-    elif:
-        print("[-----]")
-        print("[0   0]")
-        print("[  0  ]")
-        print("[0   0]")
-        print("[-----]")
-    response
-
-    else:
-        print("[-----]")
-        print("[0   0]")
-        print("[0   0]")
-        print("[0   0]")
-        print("[-----]")
-    response
-
-while response=='n':
-    print("Thanks For playing")
-
+        choice = input("Press y to roll the dice again or n to exit :(y/n) ")
+        if choice.lower()=='n':
+            break
+roll_a_dice(1,6)
